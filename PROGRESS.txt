@@ -17,7 +17,7 @@ current hp --- NOT DONE
 current checkpoint -- NOT DONE
 
 Allegiance --- REMOVED
-I plan on changing the story
+I plan on changing the story. All while keeping the same game mechanics
 
 Things that need to be added
 - More Enemy variety
