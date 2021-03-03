@@ -1,0 +1,28 @@
+CORE SYSTEM
+- First person flying controls ---DONE
+- health/damage system ---DONE
+- Enemies that fly and shoot at you --- MOSTLY DONE 
+I only have a floating stationary turret enemy for now.
+it only aims and shoots at the player when their nearby
+- Cooldown system ---DONE 
+
+SUPPORTING SYSTEM
+- MiniMap --- DONE
+- Checkpoints --- NOT DONE
+- Campaign --- NOT DONE
+
+SAVE SYSTEM
+current level/stage --- NOT DONE
+current hp --- NOT DONE
+current checkpoint -- NOT DONE
+
+Allegiance --- REMOVED
+I plan on changing the story
+
+Things that need to be added
+- More Enemy variety
+- Actual Levels to move around in
+- Saving and loading
+
+
+ 
