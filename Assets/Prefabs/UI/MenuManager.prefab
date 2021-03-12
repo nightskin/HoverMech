@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685b523c3924c0b439a3ab365aa1cdae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: 0
+  target: {x: 0, y: 0, z: 0}

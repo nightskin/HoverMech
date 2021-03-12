@@ -3,17 +3,42 @@ using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
+    public bool move = false;
+    public Vector3 target;
+
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void NewGame()
+    //----------Menu Specific-----------//
+    public void ModeSelect()
     {
-        SceneManager.LoadScene("1");
+        move = true;
+        target = new Vector3(247, 0, 0);
     }
 
+    public void BackToTitle()
+    {
+        move = true;
+        target = Vector3.zero;
+    }
 
+    void Update()
+    {
+        if(move)
+        {
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, target, 20 * Time.deltaTime);
+        }
+
+    }
+
+    //--------------------------------//
+
+    public void NewGame()
+    {
+        SceneManager.LoadScene("0");
+    }
 
     public void MainMenu()
     {
@@ -27,6 +52,6 @@ public class Menus : MonoBehaviour
     
     public void Retry()
     {
-        SceneManager.LoadScene("1");
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Lv"));
     }
 }

@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     void Die()
     {
         Cursor.lockState = CursorLockMode.None;
+        PlayerPrefs.SetInt("Lv", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("GameOver");
     }
 
