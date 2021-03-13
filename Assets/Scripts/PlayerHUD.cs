@@ -11,7 +11,7 @@ public class PlayerHUD : MonoBehaviour
     public float health;
     public float temperature;
     public bool overheating;
-    public float cooling = 5;
+    public float cooling = 3;
 
     void Start()
     {
@@ -45,9 +45,9 @@ public class PlayerHUD : MonoBehaviour
         }
 
 
-        if (temperature >= 100)
+        if (temperature == 100)
         {
-            CoolDown();
+            StartCoroutine(CoolDown());
         }
         
     }
@@ -70,17 +70,16 @@ public class PlayerHUD : MonoBehaviour
         Heat_Gauge.value = temperature;
     }
     
-    public void CoolDown()
+    IEnumerator CoolDown()
     {
-        if (Heat_Gauge.value > 0)
+        while (Heat_Gauge.value != 0)
         {
-            Heat_Gauge.value -= cooling;
+            Heat_Gauge.value -= cooling * Time.deltaTime;
             overheating = true;
+            yield return null;
         }
-        else
-        {
-            temperature = 0;
-            overheating = false;
-        }
+
+        overheating = false;
+        temperature = 0;
     }
 }

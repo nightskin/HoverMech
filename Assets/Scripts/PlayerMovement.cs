@@ -9,10 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public List<GameObject> projectiles;
     public float speed = 5f;
     public float lookSensitivity = 100;
-    public float coolDown = 5;
+    public float coolDown = 1;
     
     // change to private later
-    Transform muzzle;
     GameObject equipped;
     float xrot = 0;
     Camera cam;
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         cam = transform.Find("Cam").GetComponent<Camera>();
         equipped = projectiles[0];
-        muzzle = transform.Find("Cam").Find("Gun");
         fireDelay = 0;
     }
 
@@ -41,10 +39,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 Shoot();
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                fireDelay = 0;
             }
         }
         else
@@ -81,8 +75,8 @@ public class PlayerMovement : MonoBehaviour
             if (fireDelay <= 0)
             {
                 GameObject b = Instantiate(equipped);
-                b.transform.position = muzzle.position;
-                b.GetComponent<Ammo>().direction = cam.transform.forward;
+                b.transform.position = transform.position + transform.forward;
+                b.GetComponent<Ammo>().direction = transform.forward;
                 fireDelay = b.GetComponent<Ammo>().fireRate;
                 hud.HeatUp(b.GetComponent<Ammo>().cost);
             }
