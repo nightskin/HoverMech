@@ -15,6 +15,7 @@ public class PlayerHUD : MonoBehaviour
 
     void Start()
     {
+        transform.GetChild(1).gameObject.SetActive(true);
         health = 100;
         temperature = 0;
         overheating = false;

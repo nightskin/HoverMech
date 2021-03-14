@@ -19,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
     float fireDelay;
     PlayerHUD hud;
     Animator anim;
+    CharacterController character;
 
     void Start()
     {
+        character = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         hud = GetComponent<PlayerHUD>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -53,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
         float y = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * y + cam.transform.forward * y;
-        transform.position += move * speed * Time.deltaTime;
+        character.Move(move * speed * Time.deltaTime);
     }
 
     void Look()
@@ -64,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         xrot = Mathf.Clamp(xrot, -90, 90);
 
         cam.transform.localRotation = Quaternion.Euler(xrot, 0, 0);
-        transform.Rotate(Vector3.up * lookDir.x);
+        character.transform.Rotate(Vector3.up * lookDir.x);
     }
 
     void Shoot()
@@ -75,8 +77,8 @@ public class PlayerMovement : MonoBehaviour
             if (fireDelay <= 0)
             {
                 GameObject b = Instantiate(equipped);
-                b.transform.position = transform.position + transform.forward;
-                b.GetComponent<Ammo>().direction = transform.forward;
+                b.transform.position = cam.transform.position + cam.transform.forward;
+                b.GetComponent<Ammo>().direction = Quaternion.Euler(transform.forward) * cam.transform.forward;
                 fireDelay = b.GetComponent<Ammo>().fireRate;
                 hud.HeatUp(b.GetComponent<Ammo>().cost);
             }

@@ -7,18 +7,17 @@ TagManager:
   - Enemy
   - Bullet
   - Bounds
-  - ShockWave
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - Player
   - Water
   - UI
   - Enemy
+  - Level
   - 
-  - 
-  - 
+  - Hazard
   - 
   - 
   - 

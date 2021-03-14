@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 14764137}
   - component: {fileID: 14764139}
   - component: {fileID: 14764136}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 37918324}
   - component: {fileID: 37918325}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlashLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 551488600}
   - component: {fileID: 551488602}
   - component: {fileID: 551488603}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 778194085}
   - component: {fileID: 778194087}
   - component: {fileID: 778194084}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849382962}
   - component: {fileID: 849382965}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 849473551}
   - component: {fileID: 849475569}
   - component: {fileID: 849473550}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: CockPit View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 875235692}
   - component: {fileID: 875235694}
   - component: {fileID: 875235695}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: CockPit Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 913853053}
   - component: {fileID: 913853055}
   - component: {fileID: 913853054}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Transition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 977081917}
   - component: {fileID: 977081916}
   - component: {fileID: 977081915}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cam
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
+  near clip plane: 0.3
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1062062530}
   - component: {fileID: 1062062532}
   - component: {fileID: 1062062533}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 1404395842}
   - component: {fileID: 1404395841}
   - component: {fileID: 1404395840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 1622968631}
   - component: {fileID: 1622968633}
   - component: {fileID: 1622968630}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: CrossHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,13 +945,13 @@ GameObject:
   - component: {fileID: 1686452970}
   - component: {fileID: 1686452971}
   - component: {fileID: 1686452968}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Player HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1686452973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1047,7 +1047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793753166}
   - component: {fileID: 1793753137}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Heat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813136322}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +1171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1860524821}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,11 +1208,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5448267206236432235}
   - component: {fileID: 544265357530253912}
-  - component: {fileID: 2992939098712149691}
-  - component: {fileID: 938081871907926356}
+  - component: {fileID: 8906142036899534291}
   - component: {fileID: 192002608479663558}
   - component: {fileID: 4498010796341744010}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -1255,24 +1254,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &2992939098712149691
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5448267206236432238}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
---- !u!65 &938081871907926356
-BoxCollider:
+--- !u!143 &8906142036899534291
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1282,7 +1265,12 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Height: 1
+  m_Radius: 1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &192002608479663558
 MonoBehaviour:

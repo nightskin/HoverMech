@@ -6,6 +6,7 @@ public class MiniMap : MonoBehaviour
 {
     public Camera cam;
     public Transform target;
+    public float distance;
 
     void Start()
     {
@@ -15,6 +16,6 @@ public class MiniMap : MonoBehaviour
 
     void LateUpdate()
     {
-        cam.transform.position = new Vector3(target.position.x, 800, target.position.z);
+        cam.transform.position = new Vector3(target.position.x, distance, target.position.z);
     }
 }
