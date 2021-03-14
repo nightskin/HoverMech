@@ -9,7 +9,7 @@ it only aims and shoots at the player when their nearby
 SUPPORTING SYSTEM
 - MiniMap --- DONE
 - Checkpoints --- NOT DONE
-- Campaign --- NOT DONE
+- Campaign --- NOT DONE 
 
 SAVE SYSTEM
 current level/stage --- NOT DONE
