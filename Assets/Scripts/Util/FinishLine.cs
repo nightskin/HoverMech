@@ -11,7 +11,7 @@ public class FinishLine : MonoBehaviour
 
     private void Start()
     {
-
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     private void Update()
