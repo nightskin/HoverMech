@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   EnemyTypes:
-  - {fileID: 1511000747215512785, guid: 5b337614bd202e24ba254fb6c25dfeeb, type: 3}
+  - {fileID: 3205426118384578693, guid: 4ecce2d60eb5af74a9f6eb388177f889, type: 3}
   MaxEnemies: 5
   NumEnemies: 0
-  minOffset: -6
-  maxOffset: 15
+  minOffset: -10
+  maxOffset: 10
   interval: 5

@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Look();
             AirMovment();
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 Shoot();
             }
@@ -46,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.SetTrigger("lose");
+            if(anim.GetCurrentAnimatorStateInfo(0).IsName("YourAnimationName"))
+            {
+                Die();
+            }
         }
     }
     
@@ -73,15 +77,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!hud.overheating)
         {
-            fireDelay -= Time.deltaTime;
-            if (fireDelay <= 0)
-            {
-                GameObject b = Instantiate(equipped);
-                b.transform.position = cam.transform.position + cam.transform.forward;
-                b.GetComponent<Ammo>().direction = Quaternion.Euler(transform.forward) * cam.transform.forward;
-                fireDelay = b.GetComponent<Ammo>().fireRate;
-                hud.HeatUp(b.GetComponent<Ammo>().cost);
-            }
+              GameObject b = Instantiate(equipped);
+              b.transform.position = cam.transform.position + cam.transform.forward;
+              b.GetComponent<PlayerAmmo>().direction = Quaternion.Euler(transform.forward) * cam.transform.forward;
+              hud.HeatUp(b.GetComponent<PlayerAmmo>().cost);
         }
     }
 
@@ -94,10 +93,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "EnemyBullet")
         {
             Debug.Log("You Are Hit.");
-            hud.TakeDamage(other.gameObject.GetComponent<Ammo>().damage);
+            hud.TakeDamage(other.gameObject.GetComponent<EnemyAmmo>().damage);
         }
     }
 

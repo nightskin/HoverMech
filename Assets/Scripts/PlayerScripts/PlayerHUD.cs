@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +13,11 @@ public class PlayerHUD : MonoBehaviour
     public bool overheating;
     public float cooling = 3;
 
+    Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         transform.GetChild(1).gameObject.SetActive(true);
         health = 100;
         temperature = 0;
@@ -50,7 +53,6 @@ public class PlayerHUD : MonoBehaviour
         {
             StartCoroutine(CoolDown());
         }
-        
     }
 
     public void TakeDamage(float damage)
@@ -71,6 +73,7 @@ public class PlayerHUD : MonoBehaviour
         Heat_Gauge.value = temperature;
     }
     
+
     IEnumerator CoolDown()
     {
         while (Heat_Gauge.value != 0)

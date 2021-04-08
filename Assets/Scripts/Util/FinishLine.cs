@@ -11,7 +11,15 @@ public class FinishLine : MonoBehaviour
 
     private void Start()
     {
-        Greeting = GameObject.Find("Win Greeting");
+
+    }
+
+    private void Update()
+    {
+        if(progress.Count == checkPoints)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -150,7 +150,7 @@ public class EnemyAI : MonoBehaviour
     void Fire()
     {
         GameObject b = Instantiate(bullet, muzzle.position, muzzle.rotation);
-        b.GetComponent<Ammo>().direction = muzzle.forward;
+        b.GetComponent<EnemyAmmo>().direction = muzzle.forward;
         cooldown = atkfrequency;
     }
 

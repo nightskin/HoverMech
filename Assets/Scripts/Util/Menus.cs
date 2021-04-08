@@ -15,7 +15,7 @@ public class Menus : MonoBehaviour
     public void ModeSelect()
     {
         move = true;
-        target = new Vector3(247, 0, 0);
+        target = new Vector3(760, 0, -100);
     }
 
     public void BackToTitle()

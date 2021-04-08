@@ -36,10 +36,10 @@ public class Spawner : MonoBehaviour
     {
         if (NumEnemies < MaxEnemies)
         {
-            int e = Random.Range(0, EnemyTypes.Length);
+            //int e = Random.Range(0, EnemyTypes.Length);
             float offset = Random.Range(minOffset, maxOffset);
             Vector3 pos = new Vector3(Player.position.x + offset, 10, Player.position.z + offset);
-            Instantiate(EnemyTypes[e],pos, new Quaternion(0,0,0,1));
+            Instantiate(EnemyTypes[0],pos, new Quaternion(0,0,0,1));
             NumEnemies++;
         }
     }

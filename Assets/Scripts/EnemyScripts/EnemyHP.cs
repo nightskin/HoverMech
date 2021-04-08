@@ -12,12 +12,12 @@ public class EnemyHP : MonoBehaviour
     {
         HP = BaseHP;
     }
-    
-    void OnCollisionEnter(Collision other)
+
+    private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Bullet")
+        if(other.gameObject.tag == "PlayerBullet")
         {
-            TakeDamage(other.gameObject.GetComponent<Ammo>().damage);
+            TakeDamage(other.gameObject.GetComponent<PlayerAmmo>().damage);
             if (HP <= 0)
             {
                 Die();

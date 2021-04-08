@@ -15,6 +15,14 @@ public class Checkpoint : MonoBehaviour
         finish = GameObject.Find("Finish").GetComponent<FinishLine>();
     }
 
+    private void Update()
+    {
+        if(reached)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
