@@ -37,7 +37,7 @@ public class Menus : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("0");
+        SceneManager.LoadScene("1");
     }
 
     public void MainMenu()
@@ -50,6 +50,11 @@ public class Menus : MonoBehaviour
         Application.Quit();
     }
     
+    public void LoadGame()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Lv"));
+    }
+
     public void Retry()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("Lv"));
